@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/mycss.css">
+    <title>管理后台</title>
+</head>
+<body>
+    <!--导航 -->
+    <nav th:replace="admin/_fragment :: menu(1)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+    <div class="ui container"><!--定义容器，实现网格-->
+        <div class="ui inverted secondary stackable menu"><!--//间距-->
+            <h2 class="ui teal header item">管理后台</h2><!--///条目化-->
+            <a href="#" class="active m-item item m-mobile-hide"><i class=" home icon"></i>博客</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tasks icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+            <div class="right m-item menu m-mobile-hide">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img class="ui avatar image m-label-img-size" src="../../static/img/timg.jpg"> 王 瑞
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="" class="ui black icon button menu toggle m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+    <!--二级分页-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/index/edit}" class=" item">发布</a>
+                <a href="#" th:href="@{/admin/index}" class="teal active item">列表</a>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="m-padding-tb-large m-container-small">
+        <div class="ui container">
+            <div class="ui secondary segment form">
+                <input type="hidden" name="page">
+                <div class="inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="标题">
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled action input">
+                            <div class="ui type selection dropdown">
+                                <input type="hidden" name="typeId" >
+                                <i class="dropdown icon"></i>
+                                <div class="default text">分类</div>
+                                <div class="menu">
+                                    <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">错误日志</div>
+                                </div>
+                            </div>
+                            <button class="ui clear button">clear</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">推荐</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                    </div>
+                </div>
+            </div>
+            <div id="table-container">
+                <table th:fragment="blogList" class="ui compact teal table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>推荐</th>
+                        <th>状态</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    <tr th:each="blog,iterStat : ${page.content}">
+                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="${blog.title}">很厉害</td>
+                        <td th:text="${blog.type.name}">认知升级</td>
+                        <td th:text="${blog.recommend} ? '是' : '否'">是</td>
+                        <td th:text="${blog.published} ? '发布' : '草稿'">是</td>
+                        <td th:text="${blog.updateTime}">2020-7-16 23：37</td>
+                        <td>
+                            <a href="#" th:href="@{/admin/index/{id}/modify(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/index/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="7">
+                            <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
+                                <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">下一页</a>
+                            </div>
+                            <a href="#" th:href="@{/admin/index/edit}" class="ui mini right floated teal basic button">新增</a>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+
+                <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                    <i class="close icon"></i>
+                    <div class="header">提示：</div>
+                    <p clsaa="" th:text="${message}">操作成功</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- foot -->
+    <footer th:replace="admin/_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+    <div class="ui center aligned container">
+        <div class="ui divided inverted stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="ui item">
+                        <img src="../../static/img/二维码.png" class="ui rounded image" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list m-opacity-mini">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">联系我</h4>
+                <div class="ui inverted link list m-opacity-mini m-text-num-spaced">
+                    <a href="#" class="item"><i class="mail icon"></i>863159885@qq.com</a>
+                    <a href="#" class="item"><i class="qq icon"></i>863159885</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <p class=" m-opacity-mini">用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-opacity-tiny">@2020 Designed by wangrui</p>
+    </div>
+
+</footer>
+
+    <!--/*/<th:block th:replace="admin/_fragment :: script">/*/-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <!--/*/</th:block>/*/-->
+
+    <script>
+      $('.menu.toggle').click(function () {
+           $('.m-item').toggleClass('m-mobile-hide');
+      });
+
+      $('.ui.dropdown').dropdown();
+
+      function page(obj) {
+          $("[name='page']").val($(obj).data("page"));
+          loaddata();
+      }
+      $("#search-btn").click(function () {
+          $("[name='page']").val(0);
+          loaddata();
+      });
+      $('.clear.button')
+          .on('click',function () {
+              $('.type.dropdown')
+                  .dropdown('clear');
+          });
+
+      //渐变消失
+      $('.ui.message')
+          .on('click',function () {
+              $(this)
+                  .closest('.message')
+                  .transition('fade');
+          });
+      function loaddata() {
+          $("#table-container").load(/*[[@{/admin/index/search}]]*/"/admin/index/search",{
+              title : $("[name='title']").val(),
+              typeId : $("[name='typeId']").val(),
+              recommend : $("[name='recommend']").prop('checked'),
+              page : $("[name='page']").val()
+          });
+      }
+      
+    </script>
+    <script type="text/javascript">
+      $(function(){
+          function footerPosition(){
+              $("footer").removeClass("fixed-bottom");
+              var contentHeight = document.body.scrollHeight,//网页正文全文高度
+                  winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+              if(!(contentHeight > winHeight)){
+                  //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+                  $("footer").addClass("fixed-bottom");
+              } else {
+                  $("footer").removeClass("fixed-bottom");
+              }
+          }
+          footerPosition();
+          $(window).resize(footerPosition);
+      });
+    </script>
+
+</body>
+</html>

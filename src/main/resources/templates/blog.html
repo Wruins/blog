@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/mycss.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+    <title>博客详情</title>
+</head>
+<body>
+    <!--导航 -->
+    <nav th:replace="_fragment :: menu(1)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+        <div class="ui container"><!--定义容器，实现网格-->
+            <div class="ui inverted secondary stackable menu"><!--//间距-->
+                <h2 class="ui teal header item">Blog</h2><!--///条目化-->
+                <a href="#" class="m-item item m-mobile-hide"><i class=" home icon"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class=" tasks icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class=" clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class=" info icon"></i>关于我</a>
+                <div class="right item m-item m-mobile-hide">
+                    <div class="ui large icon inverted transparent input">
+                        <input type="text" placeholder="Serch...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="ui black icon button menu toggle m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+</nav>
+    <!-- 主体 -->
+    <div class="m-padding-tb-large m-container-small">
+        <div class="ui container">
+            <div class="ui top attached segment">
+                <!--头部-->
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img src="../static/img/timg.jpg" th:src="@{/img/timg.jpg}" alt="" class="ui avatar image m-label-img-size">
+                        <div class="content"><a href="#" class="header">王瑞</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i>2020-07-06
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i>1245
+                    </div>
+                </div>
+            </div>
+            <div class="ui attached segment">
+                <!--图片-->
+                <img src="../static/img/4k动漫壁纸_彼岸图网.jpg" th:src="@{/img/4k动漫壁纸_彼岸图网.jpg}" alt="" class="ui fluid rounded image">
+            </div>
+            <div class="ui attached padded segment">
+                <!--内容-->
+                <div class="ui right aligned basic segment">
+                     <div class="ui orange basic label">原创</div>
+                </div>
+                <h2 id="m-title" class="ui center aligned header">少女意外穿越时空</h2>
+                <div id="contained" class="js-toc-content m-padding-lr-responsive m-padding-tb-big ">
+                    <pre><code class="language-css">p { color: red }</code></pre><!--代码高亮-->
+                        大家好，我是雷霆嘎丶巴。今天我们来聊一聊一部06年的剧场版动画《穿越时空的少女》，同《红辣椒》一样，这部动画电影也是改编自桐井康隆的同名小说，不过电影描述的是以小说剧情发生20年之后的原创故事，主角也由芳山和子换为她的侄女绀野真琴。<br>
+                        <br>
+                    <h3 id="head1">1,</h3>
+                        <span style="font-weight:bold;">影片对爱情的部分轻描淡写，其中心思想就是一句话——Time waits for no one！</span><br>
+                        <br>
+                        影片的女主是一个有些笨手笨脚，不愿意长大的高二女学生。她的三大被动技能是：闯祸、躺枪以及逃避现实，有一天忽然获得了时间跳跃的能力，这个能力使她能够穿越到这些倒霉事情发生以前重新来过。说简单点就是一个事先知道了剧本的女孩，想让剧本里相关的人都能远离不幸，逃避现实。但是矛盾也出在这里，不幸最后不会被抹去，只会从一个人的身上转嫁到另一个人的身上。现实也终究要面对，由于女主的穿越行为而产生的蝴蝶效应，终究会作用到自己的身上，想通过跳跃时空来逃避问题和不幸，结果注定是逃不掉的，所以印证了影片的中心思想：Time waits for no one！<br>
+                        <br>
+                    <h3 id="head2">2,</h3>
+                        <span style="font-weight:bold;">女主不断穿越时空的行为，其实就是在身体年龄不变的情况下达到心理年龄日趋成年化</span><br>
+                        <br>
+                        道理口头上说说，谁不会说；说出来了之后又有谁听不懂呢？我们经常能看到周遭一些明知理亏的人，依然蛮不讲理地胡搅蛮缠，就像青春期叛逆的少男少女一样，你说他不懂吗，你说他不知晓他人对自己的一片心意吗，你说他难道感觉不到在意他的人对他的关怀吗？都不是，当你看到那些不把自己好心的说教当作一回事的人的时候，你也许心中忿忿不平。不过身边要是有年老的长辈，也许会对你说：人生就是弯弯绕，你不让他去绕一遭的话，他永远也体会不到什么叫做刻骨铭心！而影片中穿越时空的能力让女主能够重复一个既定时段并不停地累加弯弯绕出来的那种刻骨铭心的宝贵经历，就像《哈利·波特》里得到了麦格教授的时间转换器的赫敏·格兰杰，可以回到几个小时前上更多的课程。<br>
+                        <br>
+                    <h3 id="head3">3,</h3>
+                        <span style="font-weight:bold;">通过能看见未来剧本的女主的视角，来达到对观众进行深刻说教Time waits for no one这个既是影片想要传达的核心思想，也是人们老生常谈的道理</span><br>
+                        <br>
+                        我们仔细来回顾一下女主获得了穿越时空的能力之后，她所做的一切吧。她一开始所做的就是用能力让自己远离哪怕是微不足道的不幸——学校里面出的丑，文理分班必须选择时的纠结，以及对未来自己的发展规划感到迷惘，还有不得不为了上学而早起的无奈。她可以从中不断地试错，于是膨胀到认为自己能从无限可能性的未来中选出对自己最有利的那一种可能性。<br>
+                        <br>
+                        再到她所逃避的这些不幸被原封不动地转嫁到他人身上时，她开始用自己的能力来让这些因自己而不幸的人远离本该归属她的不幸。最后从逃避来自好朋友的爱情表白，到真正意识到自己内心的真正感情，不再逃避、不再犹豫、倾尽全力去抓住它时，女主终于在绕了一个大弯之后，变得成熟起来，懂得了Time waits for no one这个道理——珍惜当下、不要逃避、直面现实、尽量做出不让自己后悔的选择，因为即使是获得穿越时空的能力，其使用次数也是有限的啊！让观众切身体会到女主的心路历程，体会到那种恍如隔世、抱憾终身所带给自己的刻骨铭心。<br>
+                        <br>
+                    <h3 id="head4">4,</h3>
+                        <span style="font-weight:bold;">时光不会倒流，过去不会改变，人生不会重来；你永远无法穿越时空重新来过，那么就请珍惜当下吧！</span><br>
+                        <br>
+                        某种意义上，《穿越时空的少女》这部动画和《ReLIFE 重返17岁》有着异曲同工之妙。在《穿越时空的少女》中，女主通过不断的时空跳跃，累积经验，变得成熟，最后终于正视并表达了自己的感情；而在《ReLIFE 重返17岁》中，男女主通过从职场人士重回17岁校园生活一年的经历，用成熟的心智回到过去找到自己的初心，并深深地爱上彼此，矢志不渝。虽然这两部作品的主人公的成熟历程是反着来的，但他们本质上却是殊途同归的，那就是——时不我待、真诚相对；找回初心、莫留遗憾！
+                </div>
+                <!--标签-->
+                <div class=" m-padding-lr-responsive m-padding-lr">
+                    <div class="ui basic teal label ">
+                        标签
+                    </div>
+                </div>
+                <!--打赏-->
+                <div class="ui segment basic center aligned">
+                    <button class="ui payButton orange circular basic button">打赏</button>
+                </div>
+                <!--弹出打赏码-->
+                <div class="ui payimg flowing popup transition hidden">
+                    <div class="ui orange basic label ">
+                        <div class="ui images" style="font-size: inherit !important;">
+                            <div class="image">
+                                <img src="../static/img/二维码.png" alt="" class="ui rounded bordered image" style="width: 120px;">
+                                <div>支付宝</div>
+                            </div>
+                            <div class="image">
+                                <img src="../static/img/二维码.png" alt="" class="ui rounded bordered image" style="width: 120px;">
+                                <div>微信</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="ui attached positive message">
+                <!--博客信息-->
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ui class="list">
+                            <li>作者：王瑞</li>
+                            <li>发表时间：2020</li>
+                            <li>版权声明：自由转载-非商用-非衍生-保持署名</li>
+                            <li>公众号转载：请在文末添加作者公众号</li>
+                        </ui>
+                    </div>
+                    <div class="five wide column">
+                        <img src="../static/img/二维码.png" alt="" class="ui right floated rounded bordered image" style="width: 110px;">
+                    </div>
+                </div>
+            </div>
+            <div id="leave-message" class="ui bottom attached segment">
+                <!--留言区列表-->
+                <div class="ui teal segment">
+                    <div class="ui comments">
+                        <h3 class="ui dividing header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">留言</font></font></h3>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="../static/img/二维码.png">
+                            </a>
+                            <div class="content">
+                                <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马特</font></font></a>
+                                <div class="metadata">
+                                    <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">今天下午5:42</font></font></span>
+                                </div>
+                                <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    多么艺术！
+                                </font></font></div>
+                                <div class="actions">
+                                    <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="../static/img/二维码.png">
+                            </a>
+                            <div class="content">
+                                <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">傅</font></font></a>
+                                <div class="metadata">
+                                    <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">昨天上午12:30</font></font></span>
+                                </div>
+                                <div class="text">
+                                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这对我的研究非常有用。</font><font style="vertical-align: inherit;">也谢谢！</font></font></p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="../static/img/二维码.png">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">珍妮·赫斯（Jenny Hess）</font></font></a>
+                                        <div class="metadata">
+                                            <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在</font></font></span>
+                                        </div>
+                                        <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            艾略特，你总是很正确:)
+                                        </font></font></div>
+                                        <div class="actions">
+                                            <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="../static/img/二维码.png">
+                            </a>
+                            <div class="content">
+                                <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乔·亨德森</font></font></a>
+                                <div class="metadata">
+                                    <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5天前</font></font></span>
+                                </div>
+                                <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    杜德，太棒了 </font><font style="vertical-align: inherit;">非常感谢
+                                </font></font></div>
+                                <div class="actions">
+                                    <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--留言区表单-->
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input m-mobile-wide">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="email" name="email" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-padding m-fixed m-right-bottom m-Toplevel">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui bt-contents teal button">目录</button>
+            <button type="button" class="ui teal button" onclick="location.href='#leave-message'">留言</button>
+            <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+            <button id="top-btn" type="button" class="ui icon button"><i class="chevron up icon"></i></button>
+        </div>
+    </div>
+    <div id="qrcode" class="ui wechatInf flowing popup transition hidden m-padding" style="width: 130px !important;">
+<!--        <img src="./static/img/二维码.png" alt="" class="ui rounded image m-info-img-size">-->
+    </div>
+
+    <div class="ui pop-contents flowing popup transition hidden" style="width: 250px !important;">
+        <!--弹出目录-->
+        <ol class="js-toc">
+
+        </ol>
+
+    </div>
+
+    <!-- foot -->
+<footer th:replace="_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+    <div class="ui center aligned container">
+        <div class="ui divided inverted stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="ui item">
+                        <img src="../static/img/二维码.png"  class="ui rounded image" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list m-opacity-mini">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">联系我</h4>
+                <div class="ui inverted link list m-opacity-mini m-text-num-spaced">
+                    <a href="#" class="item"><i class="mail icon"></i>863159885@qq.com</a>
+                    <a href="#" class="item"><i class="qq icon"></i>863159885</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <p class=" m-opacity-mini">用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-opacity-tiny">@2020 Designed by wangrui</p>
+    </div>
+
+</footer>
+
+<!--/*/<th:block th:replace="_fragment :: script">/*/-->
+
+<!--/*/</th:block>/*/-->
+
+    <script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+      $('.menu.toggle').click(function () {
+           $('.m-item').toggleClass('m-mobile-hide');
+      });
+
+      $('.payButton').popup({
+          popup:$('.payimg.popup'),
+          on:'click',
+          position:'bottom center',
+      });
+
+      /*跳出目录*/
+      $('.bt-contents').popup({
+          popup:$('.pop-contents.popup'),
+          on:'click',
+          position:'left center',
+      });
+        $('.wechat').popup({
+            popup:$('.wechatInf'),
+            on:'hover',
+            position:'left center',
+        });
+        /*二维码生成*/
+        var qrcode = new QRCode("qrcode", {
+            text: "http://jindo.dev.naver.com/collie",
+            width: 110,
+            height: 110,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        $('#top-btn').click(function(){
+            $(window).scrollTo(0,500);
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/mycss.css">
+    <title>欢迎使用</title>
+</head>
+<body>
+    <!--导航 -->
+    <nav th:replace="admin/_fragment :: menu(0)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+    <div class="ui container"><!--定义容器，实现网格-->
+        <div class="ui inverted secondary stackable menu"><!--//间距-->
+            <h2 class="ui teal header item">管理后台</h2><!--///条目化-->
+            <a href="#" class="active m-item item m-mobile-hide"><i class=" home icon"></i>博客</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tasks icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+            <div class="right m-item menu m-mobile-hide">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img class="ui avatar image m-label-img-size" src="../../static/img/timg.jpg"> 王 瑞
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="" class="ui black icon button menu toggle m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="ui container">
+        <div class="ui success message">
+            <h3>Hi,</h3>
+            <p>王瑞，欢迎登陆</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+
+    <!-- foot -->
+    <footer th:replace="admin/_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+    <div class="ui center aligned container">
+        <div class="ui divided inverted stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="ui item">
+                        <img src="../../static/img/二维码.png" class="ui rounded image" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list m-opacity-mini">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">联系我</h4>
+                <div class="ui inverted link list m-opacity-mini m-text-num-spaced">
+                    <a href="#" class="item"><i class="mail icon"></i>863159885@qq.com</a>
+                    <a href="#" class="item"><i class="qq icon"></i>863159885</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <p class=" m-opacity-mini">用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事,用户故事</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-opacity-tiny">@2020 Designed by wangrui</p>
+    </div>
+
+</footer>
+
+    <!--/*/<th:block th:replace="admin/_fragment :: script">/*/-->
+
+    <!--/*/</th:block>/*/-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script>
+      $('.menu.toggle').click(function () {
+           $('.m-item').toggleClass('m-mobile-hide');
+      });
+
+      $('.ui.dropdown').dropdown();
+    </script>
+    <script type="text/javascript">
+      $(function(){
+          function footerPosition(){
+              $("footer").removeClass("fixed-bottom");
+              var contentHeight = document.body.scrollHeight,//网页正文全文高度
+                  winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+              if(!(contentHeight > winHeight)){
+                  //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+                  $("footer").addClass("fixed-bottom");
+              } else {
+                  $("footer").removeClass("fixed-bottom");
+              }
+          }
+          footerPosition();
+          $(window).resize(footerPosition);
+      });
+    </script>
+
+</body>
+</html>

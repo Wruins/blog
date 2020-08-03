@@ -1,0 +1,6 @@
+2020-07-22 15:46:56.616  INFO 22816 --- [restartedMain] BlogApplication          : Starting BlogApplication on wruins with PID 22816 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
+2020-07-22 15:46:56.619  INFO 22816 --- [restartedMain] BlogApplication          : The following profiles are active: pro
+2020-07-22 15:46:58.077  INFO 22816 --- [restartedMain] BlogApplication          : Started BlogApplication in 1.841 seconds (JVM running for 3.403)
+2020-07-22 15:57:47.974  INFO 6264 --- [restartedMain] BlogApplication          : Starting BlogApplication on wruins with PID 6264 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
+2020-07-22 15:57:47.976  INFO 6264 --- [restartedMain] BlogApplication          : The following profiles are active: pro
+2020-07-22 15:57:49.691  INFO 6264 --- [restartedMain] BlogApplication          : Started BlogApplication in 2.164 seconds (JVM running for 3.741)

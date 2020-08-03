@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragment :: head(~{::title})">
+    <title>404</title>
+</head>
+<body>
+<!--导航 -->
+<nav th:replace="_fragment :: menu(0)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+    <div class="ui container"><!--定义容器，实现网格-->
+        <div class="ui inverted secondary stackable menu"><!--//间距-->
+            <h2 class="ui teal header item">Blog</h2><!--///条目化-->
+            <a href="#" class="m-item item m-mobile-hide"><i class=" home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tasks icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" info icon"></i>关于我</a>
+            <div class="right item m-item m-mobile-hide">
+                <div class="ui large icon inverted transparent input">
+                    <input type="text" placeholder="Serch...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui black icon button menu toggle m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="ui container">
+    <div class="ui error message m-padding-tb-massive">
+        <h2>404</h2>
+        <p>对不起，您访问的资源不存在</p>
+    </div>
+</div>
+<br><br><br><br><br><br>
+
+    <footer th:replace="_fragment :: footer"></footer>
+</body>
+</html>
