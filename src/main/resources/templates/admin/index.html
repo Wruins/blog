@@ -92,7 +92,7 @@
                     <tbody>
                     <tr th:each="blog,iterStat : ${page.content}">
                         <td th:text="${iterStat.count}">1</td>
-                        <td th:text="${blog.title}">很厉害</td>
+                        <td ><div class="m-table-overflow" th:text="${blog.title}">很厉害</div></td>
                         <td th:text="${blog.type.name}">认知升级</td>
                         <td th:text="${blog.recommend} ? '是' : '否'">是</td>
                         <td th:text="${blog.published} ? '发布' : '草稿'">是</td>

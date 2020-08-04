@@ -168,6 +168,13 @@
        z-index: 1 !important;
    }
 
+   .m-table-overflow{
+       width: 131px !important;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+   }
+
 
 
 
