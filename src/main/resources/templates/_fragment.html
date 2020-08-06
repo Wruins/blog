@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
     <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/lib/Markdown/css/editormd.min.css" th:href="@{/lib/Markdown/css/editormd.min.css}">
     <title th:replace="${title}">博客详情</title>
 </head>
 <body>
@@ -21,12 +22,16 @@
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class=" clone icon"></i>归档</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class=" info icon"></i>关于我</a>
+
             <div class="right item m-item m-mobile-hide">
-                <div class="ui large icon inverted transparent input">
-                    <input type="text" placeholder="Serch...">
-                    <i class="search link icon"></i>
-                </div>
+                <form id="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui large icon inverted transparent input">
+                        <input type="text" name="query" placeholder="Search..." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
             </div>
+
         </div>
     </div>
     <a href="#" class="ui black icon button menu toggle m-top-right m-mobile-show">

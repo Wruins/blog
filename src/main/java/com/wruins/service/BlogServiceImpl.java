@@ -3,6 +3,7 @@ package com.wruins.service;
 import com.wruins.NotFoundException;
 import com.wruins.dao.BlogRepository;
 import com.wruins.po.Blog;
+import com.wruins.util.MarkdownUtils;
 import com.wruins.util.MyBeanUtils;
 import com.wruins.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -62,6 +63,11 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public Page<Blog> listBlog(String query, Pageable pageable) {
+        return blogRepository.findByQuery(query, pageable);
+    }
+
+    @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
         Sort sort = Sort.by(Sort.Direction.DESC,"updateTime");
         Pageable pageable = PageRequest.of(0,size,sort);
@@ -97,5 +103,21 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
+    }
+
+    @Transactional
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+
+    //    blogRepository.updateViews(id);
+        return b;
     }
 }

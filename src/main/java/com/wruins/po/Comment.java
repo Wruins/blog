@@ -17,16 +17,16 @@ public class Comment {
     private String content;
     private String avatar;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date creatTime;
+    private Date createTime;
 
     @ManyToOne
     private Blog blog;
 
-    @OneToMany(mappedBy = "replyComments")
-    private List<Comment> parentComment= new ArrayList<>();
+    @OneToMany(mappedBy = "parentComment")
+    private List<Comment> replyComments= new ArrayList<>();
 
     @ManyToOne
-    private Comment replyComments;
+    private Comment parentComment;
 
     public Comment(){
     }
@@ -71,12 +71,12 @@ public class Comment {
         this.avatar = avatar;
     }
 
-    public Date getCreatTime() {
-        return creatTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public Blog getBlog() {
@@ -87,20 +87,20 @@ public class Comment {
         this.blog = blog;
     }
 
-    public List<Comment> getParentComment() {
-        return parentComment;
-    }
-
-    public void setParentComment(List<Comment> parentComment) {
-        this.parentComment = parentComment;
-    }
-
-    public Comment getReplyComments() {
+    public List<Comment> getReplyComments() {
         return replyComments;
     }
 
-    public void setReplyComments(Comment replyComments) {
+    public void setReplyComments(List<Comment> replyComments) {
         this.replyComments = replyComments;
+    }
+
+    public Comment getParentComment() {
+        return parentComment;
+    }
+
+    public void setParentComment(Comment parentComment) {
+        this.parentComment = parentComment;
     }
 
     @Override
@@ -111,7 +111,7 @@ public class Comment {
                 ", email='" + email + '\'' +
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +
-                ", creatTime=" + creatTime +
+                ", creatTime=" + createTime +
                 '}';
     }
 }

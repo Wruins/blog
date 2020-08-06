@@ -11,6 +11,12 @@
        bottom:0 !important;
    }
 
+   pre{
+        overflow-x: auto;
+    }
+   pre::-webkit-scrollbar-thumb{
+       -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+   }
 
 /*--內帘间隔--*/
    .m-padding-tb-mini{
@@ -174,6 +180,8 @@
        overflow: hidden;
        text-overflow: ellipsis;
    }
+
+
 
 
 

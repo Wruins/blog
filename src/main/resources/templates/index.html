@@ -158,7 +158,7 @@
 </div>
 
 <!-- foot -->
-<footer  class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+<footer th:replace="_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
     <div class="ui center aligned container">
         <div class="ui divided inverted stackable grid">
             <div class="three wide column">
@@ -193,13 +193,12 @@
     </div>
 
 </footer>
+
 <th:block th:replace="_fragment :: script">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
 </th:block>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
 <script>
     $('.menu.toggle').click(function () {
