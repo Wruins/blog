@@ -87,6 +87,9 @@
    .m-black-a {
         color: #333;
    }
+   .m-text-maincolor{
+       color: #00b5ad;
+   }
 
    /*--------行内块-----------*/
    .m-inline-block{
