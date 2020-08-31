@@ -58,6 +58,10 @@
        margin-top: 0.3em !important;
        margin-bottom: 0.3em !important;
    }
+   .m-margin-tb{
+       margin-top: 1em !important;
+       margin-bottom: 1em !important;
+   }
     .m-margin-top-small{
         margin-top: 0.5em !important;
     }

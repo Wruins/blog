@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragment :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -9,7 +9,7 @@
 </head>
 <body>
 <!--导航 -->
-<nav class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+<nav th:replace="_fragment :: menu(4)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
     <div class="ui container"><!--定义容器，实现网格-->
         <div class="ui inverted secondary stackable menu"><!--//间距-->
             <h2 class="ui teal header item">Blog</h2><!--///条目化-->
@@ -40,91 +40,30 @@
                     <h3 class="ui teal header">归档</h3>
                 </div>
                 <div class="right aligned column">
-                    共 <h2 class="ui orange header m-inline-block"> 124 </h2> 篇博客
+                    共 <h2 class="ui orange header m-inline-block" th:text="${blogCount}"> 124 </h2> 篇博客
                 </div>
             </div>
         </div>
-        <h2 class="ui center aligned header">2020</h2>
-        <div class="ui fluid vertical menu">
-            <a href="#" class="item">
+
+        <div th:each="item : ${archiveMap}" class="m-margin-tb">
+            <h2 class="ui center teal horizontal divider aligned header" th:text="${item.key}">2020</h2>
+            <div class="ui fluid vertical menu m-margin-tb">
+                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" class="item" th:each="blog : ${item.value}">
                 <span>
-                    <i class="left float mini teal circle icon"></i> 博客1博客1博客1
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
+                    <i class="left float mini teal circle icon" ></i><span th:text="${blog.title}">博客1博客1博客1</span>
+                    <div class="ui teal basic left pointing label m-padding-label-mini" ><span th:text="${#dates.format(blog.updateTime,'MM/dd')}">5/20</span></div>
                 </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客2博客2博客2
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客3博客3博客3
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客4博客4博客4
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客5博客5博客5
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
+                    <div class="ui orange basic label m-padding-label-mini" ><span th:text="${blog.flag}">原创</span></div>
+                </a>
+
+            </div>
         </div>
-        <h2 class="ui center aligned header">2019</h2>
-        <div class="ui fluid vertical menu">
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客1博客1博客1
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客2博客2博客2
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客3博客3博客3
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客4博客4博客4
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="left float mini teal circle icon"></i> 博客5博客5博客5
-                    <div class="ui teal basic left pointing label m-padding-label-mini">5/20</div>
-                </span>
-                <div class="ui orange basic label m-padding-label-mini">原创</div>
-            </a>
-        </div>
+
     </div>
 </div>
 
 <!-- foot -->
-<footer class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+<footer th:replace="_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
     <div class="ui center aligned container">
         <div class="ui divided inverted stackable grid">
             <div class="three wide column">
@@ -160,9 +99,10 @@
 
 </footer>
 
-
+<!--/*/<th:block th:replace="_fragment :: script">/*/-->
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 
 <script>
     $('.menu.toggle').click(function () {

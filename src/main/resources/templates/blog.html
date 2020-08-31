@@ -101,32 +101,35 @@
                     标签
                 </div>
             </div>
-            <!--打赏-->
-            <div class="ui segment basic center aligned">
-                <button class="ui payButton orange circular basic button">打赏</button>
-            </div>
-            <!--弹出打赏码-->
-            <div class="ui payimg flowing popup transition hidden">
-                <div class="ui orange basic label ">
-                    <div class="ui images" style="font-size: inherit !important;">
-                        <div class="image">
-                            <img src="../static/img/二维码.png" th:src="@{/img/二维码.png}" alt=""
-                                 class="ui rounded bordered image" style="width: 120px;">
-                            <div>支付宝</div>
-                        </div>
-                        <div class="image">
-                            <img src="../static/img/二维码.png" th:src="@{/img/二维码.png}" alt=""
-                                 class="ui rounded bordered image" style="width: 120px;">
-                            <div>微信</div>
+            <div th:if="${blog.appreciation}">
+                <!--打赏-->
+                <div class="ui segment basic center aligned">
+                    <button class="ui payButton orange circular basic button">打赏</button>
+                </div>
+                <!--弹出打赏码-->
+                <div class="ui payimg flowing popup transition hidden">
+                    <div class="ui orange basic label ">
+                        <div class="ui images" style="font-size: inherit !important;">
+                            <div class="image">
+                                <img src="../static/img/二维码.png" th:src="@{/img/二维码.png}" alt=""
+                                     class="ui rounded bordered image" style="width: 120px;">
+                                <div>支付宝</div>
+                            </div>
+                            <div class="image">
+                                <img src="../static/img/二维码.png" th:src="@{/img/二维码.png}" alt=""
+                                     class="ui rounded bordered image" style="width: 120px;">
+                                <div>微信</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
 
         </div>
 
-        <div class="ui attached positive message">
+        <div class="ui attached positive message" th:if="${blog.shareStatement}">
             <!--博客信息-->
             <div class="ui middle aligned grid">
                 <div class="eleven wide column">
@@ -145,7 +148,7 @@
             </div>
         </div>
 
-        <div class="ui bottom attached segment">
+        <div class="ui bottom attached segment" th:if="${blog.commentabled}">
             <!--留言区列表-->
             <div id="leave-message" class="ui teal segment">
                 <div th:fragment="commentList">
@@ -156,9 +159,11 @@
                                 <img src="../static/img/二维码.png" th:src="@{${comment.avatar}}">
                             </a>
                             <div class="content">
-                                <a class="author" >
+                                <a class="author">
                                     <span th:text="${comment.nickname}">珍妮</span>
-                                    <div class="ui mini basic teal left pointing label m-padding-label-mini" th:if="${comment.adminComment}">博主</div>
+                                    <div class="ui mini basic teal left pointing label m-padding-label-mini"
+                                         th:if="${comment.adminComment}">博主
+                                    </div>
                                 </a>
                                 <div class="metadata">
                                     <span class="date"
@@ -173,16 +178,19 @@
                                        onclick="reply(this)">回复</a>
                                 </div>
                             </div>
-                            <div class="comments"th:if="${#arrays.length(comment.replyComments)}>0">
+                            <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
                                 <div class="comment" th:each="reply : ${comment.replyComments}">
                                     <a class="avatar">
                                         <img src="../static/img/二维码.png" th:src="@{${reply.avatar}}">
                                     </a>
                                     <div class="content">
-                                        <a class="author" >
+                                        <a class="author">
                                             <span th:text="${reply.nickname}">马特</span>
-                                            <div class="ui mini basic teal left pointing label m-padding-label-mini" th:if="${reply.adminComment}">博主</div>
-                                            <span th:text="| @ ${reply.parentComment.nickname}|" class="m-text-maincolor">@ 珍妮</span>
+                                            <div class="ui mini basic teal left pointing label m-padding-label-mini"
+                                                 th:if="${reply.adminComment}">博主
+                                            </div>
+                                            <span th:text="| @ ${reply.parentComment.nickname}|"
+                                                  class="m-text-maincolor">@ 珍妮</span>
                                         </a>
                                         <div class="metadata">
                                     <span class="date"
@@ -268,13 +276,15 @@
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input m-mobile-wide">
                             <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="姓名" th:value="${session.user}!=null ? ${session.user.nickname}">
+                            <input type="text" name="nickname" placeholder="姓名"
+                                   th:value="${session.user}!=null ? ${session.user.nickname}">
                         </div>
                     </div>
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="email" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
+                            <input type="email" name="email" placeholder="邮箱"
+                                   th:value="${session.user}!=null ? ${session.user.email}">
                         </div>
                     </div>
                     <div class="field m-mobile-wide m-margin-bottom-small">

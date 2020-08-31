@@ -17,11 +17,11 @@
     <div class="ui container"><!--定义容器，实现网格-->
         <div class="ui inverted secondary stackable menu"><!--//间距-->
             <h2 class="ui teal header item">Blog</h2><!--///条目化-->
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i>首页</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" tasks icon"></i>分类</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class=" clone icon"></i>归档</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class=" info icon"></i>关于我</a>
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" tasks icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class=" clone icon"></i>归档</a>
+            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class=" info icon"></i>关于我</a>
 
             <div class="right item m-item m-mobile-hide">
                 <form id="search" action="#" th:action="@{/search}" method="post" target="_blank">
@@ -51,17 +51,19 @@
             </div>
             <div class="three wide column">
                 <h4 class="ui inverted header">最新博客</h4>
-                <div class="ui inverted link list m-opacity-mini">
-                    <a href="#" class="item">用户故事</a>
-                    <a href="#" class="item">用户故事</a>
-                    <a href="#" class="item">用户故事</a>
+                <div id="newblog-container" th:fragment="newblogList">
+                    <div class="ui inverted link list m-opacity-mini"  th:each="blog : ${newblogs}" th:if="${blog.published && blog.recommend}" >
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item">
+                            <span th:text="${blog.title}">用户故事</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="three wide column">
                 <h4 class="ui inverted header">联系我</h4>
                 <div class="ui inverted link list m-opacity-mini m-text-num-spaced">
-                    <a href="#" class="item"><i class="mail icon"></i>863159885@qq.com</a>
-                    <a href="#" class="item"><i class="qq icon"></i>863159885</a>
+                    <a href="#" class="item" title="Email"><span th:text="#{index.Email}"></span></a>
+                    <a href="#" class="item" title="QQ"><span th:text="#{index.QQ}"></span></a>
                 </div>
             </div>
             <div class="seven wide column">
@@ -83,6 +85,10 @@
         <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
         <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
         <script src="../../static/lib/Markdown/editormd.min.js" th:src="@{/lib/Markdown/editormd.min.js}"></script>
+        <script>
+            $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+        </script>
+
     </th:block>
 </body>
 </html>

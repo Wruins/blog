@@ -1,1021 +1,157 @@
-2020-08-08 14:10:39.075  INFO 12064 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 12064 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 14:10:39.081 DEBUG 12064 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 14:10:39.082  INFO 12064 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 14:10:39.474  INFO 12064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-08 14:10:39.475  INFO 12064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-08 14:10:41.054  INFO 12064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 14:10:41.156  INFO 12064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 5 JPA repository interfaces.
-2020-08-08 14:10:42.130  INFO 12064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 14:10:42.152  INFO 12064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 14:10:42.153  INFO 12064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 14:10:42.289  INFO 12064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 14:10:42.289  INFO 12064 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2814 ms
-2020-08-08 14:10:42.530  INFO 12064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 14:10:42.621  INFO 12064 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 14:10:42.746  INFO 12064 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-08-08 14:10:42.821  WARN 12064 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 14:10:43.199  INFO 12064 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-08 14:10:43.358  INFO 12064 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-08 14:10:43.375  INFO 12064 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 14:10:43.568  INFO 12064 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-08 14:10:43.593  INFO 12064 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 14:10:43.834  INFO 12064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 14:10:43.878  INFO 12064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 14:10:43.880  INFO 12064 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 14:10:44.704  INFO 12064 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 14:10:44.712  INFO 12064 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 14:10:45.481  INFO 12064 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 14:10:45.501  INFO 12064 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 6.987 seconds (JVM running for 9.113)
-2020-08-08 14:26:38.468  INFO 12064 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 14:26:38.468  INFO 12064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 14:26:38.480  INFO 12064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2020-08-08 14:26:38.657  INFO 12064 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
-2020-08-08 14:26:38.912  WARN 12064 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 14:26:38.925  WARN 12064 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 14:26:38.929  INFO 12064 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : index
-2020-08-08 14:26:42.794  INFO 12064 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:26:42.848  INFO 12064 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:26:43.388  INFO 12064 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:26:43.440  INFO 12064 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:27:38.118  INFO 12064 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:27:38.123  INFO 12064 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:27:38.675  INFO 12064 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:27:38.693  INFO 12064 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:28:08.093  INFO 12064 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='kiy', email='863159885@qq.com', content='子级显示测试', avatar='null', creatTime=null}]}
-2020-08-08 14:28:08.548  INFO 12064 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 14:28:08.564  INFO 12064 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:28:08.570  INFO 12064 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:30:54.779  INFO 16276 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 16276 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 14:30:54.782 DEBUG 16276 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 14:30:54.782  INFO 16276 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 14:30:54.841  INFO 16276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-08 14:30:54.842  INFO 16276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-08 14:30:55.530  INFO 16276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 14:30:55.607  INFO 16276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 5 JPA repository interfaces.
-2020-08-08 14:30:56.291  INFO 16276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 14:30:56.298  INFO 16276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 14:30:56.299  INFO 16276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 14:30:56.412  INFO 16276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 14:30:56.412  INFO 16276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1570 ms
-2020-08-08 14:30:56.614  INFO 16276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 14:30:56.659  INFO 16276 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 14:30:56.709  INFO 16276 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-08-08 14:30:56.796  WARN 16276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 14:30:56.838  INFO 16276 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-08 14:30:56.932  INFO 16276 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-08 14:30:57.094  INFO 16276 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-08 14:30:57.112  INFO 16276 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 14:30:57.124  INFO 16276 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 14:30:57.493  INFO 16276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 14:30:57.530  INFO 16276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 14:30:57.531  INFO 16276 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 14:30:57.915  INFO 16276 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 14:30:57.923  INFO 16276 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 14:30:58.442  INFO 16276 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 14:30:58.452  INFO 16276 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 4.121 seconds (JVM running for 5.427)
-2020-08-08 14:31:11.761  INFO 16276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 14:31:11.761  INFO 16276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 14:31:11.771  INFO 16276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2020-08-08 14:31:11.801  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:31:11.906  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:31:12.804  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:31:12.862  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:31:13.003 ERROR 16276 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "blog::[commentList]": An error happened during template parsing (template: "class path resource [templates/blog.html]")
-
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "@arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 48 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "@arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	... 50 common frames omitted
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1058E: A problem occurred when trying to resolve bean 'arrays':'Could not resolve bean reference against BeanFactory'
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:59) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 82 common frames omitted
-Caused by: org.springframework.expression.AccessException: Could not resolve bean reference against BeanFactory
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:54) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	... 87 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'arrays' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:812) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	... 88 common frames omitted
-
-2020-08-08 14:31:13.019 ERROR 16276 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
-
-org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'arrays' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:812) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-
-2020-08-08 14:31:24.154  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:31:24.159  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:31:24.576  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:31:24.594  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:31:24.604 ERROR 16276 --- [http-nio-8080-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-3] Exception processing template "blog::[commentList]": An error happened during template parsing (template: "class path resource [templates/blog.html]")
-
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "@arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 48 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "@arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	... 50 common frames omitted
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1058E: A problem occurred when trying to resolve bean 'arrays':'Could not resolve bean reference against BeanFactory'
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:59) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 82 common frames omitted
-Caused by: org.springframework.expression.AccessException: Could not resolve bean reference against BeanFactory
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:54) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	... 87 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'arrays' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:812) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	... 88 common frames omitted
-
-2020-08-08 14:31:24.606 ERROR 16276 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
-
-org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'arrays' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:812) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:55) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-
-2020-08-08 14:32:34.708  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:32:34.713  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:32:35.098  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:32:35.115  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:32:35.222 ERROR 16276 --- [http-nio-8080-exec-9] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-9] Exception processing template "blog::[commentList]": An error happened during template parsing (template: "class path resource [templates/blog.html]")
-
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 48 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "arrays.length(comment.replyComments)" (template: "blog" - line 173, col 50)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	... 50 common frames omitted
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method length(java.util.ArrayList) on null context object
-	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	... 82 common frames omitted
-
-2020-08-08 14:32:35.223 ERROR 16276 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
-
-org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method length(java.util.ArrayList) on null context object
-	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.7.RELEASE.jar:5.2.7.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.36.jar:9.0.36]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
-
-2020-08-08 14:33:42.340  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:33:42.343  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:33:42.800  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:33:42.813  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:36:26.048  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:36:26.052  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:36:26.511  INFO 16276 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:36:26.522  INFO 16276 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:38:27.642  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:38:27.647  INFO 16276 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:38:28.061  INFO 16276 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:38:28.074  INFO 16276 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:38:37.972  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:38:37.975  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:38:38.372  INFO 16276 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:38:38.387  INFO 16276 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:39:03.687  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 14:39:03.692  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 14:39:04.125  INFO 16276 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:39:04.134  INFO 16276 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:40:01.668  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='kiyoka', email='863159885@qq.com', content='kiyoka', avatar='null', creatTime=null}]}
-2020-08-08 14:40:01.713  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 14:40:01.730  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:40:01.752  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:40:38.454  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='kam', email='863159885@qq.com', content='kam', avatar='null', creatTime=null}]}
-2020-08-08 14:40:38.477  INFO 16276 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 14:40:38.483  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 14:40:38.500  INFO 16276 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 14:42:15.278  INFO 16276 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
-2020-08-08 14:42:15.296  WARN 16276 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 14:42:15.305  WARN 16276 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 14:42:15.310  INFO 16276 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Result : index
-2020-08-08 15:10:21.054  INFO 16276 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:10:21.060  INFO 16276 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:10:21.695  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:10:21.711  INFO 16276 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:31:02.609  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:31:02.615  INFO 16276 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:31:03.119  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:31:03.137  INFO 16276 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:45:10.805  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 7308 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 15:45:10.810 DEBUG 7308 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 15:45:10.811  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 15:45:10.858  INFO 7308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-08 15:45:10.858  INFO 7308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-08 15:45:11.513  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 15:45:11.586  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 5 JPA repository interfaces.
-2020-08-08 15:45:12.283  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 15:45:12.291  INFO 7308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 15:45:12.291  INFO 7308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 15:45:12.414  INFO 7308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 15:45:12.415  INFO 7308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
-2020-08-08 15:45:12.608  INFO 7308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:45:12.651  INFO 7308 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 15:45:12.696  INFO 7308 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-08-08 15:45:12.791  WARN 7308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 15:45:12.830  INFO 7308 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-08 15:45:12.931  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-08 15:45:13.083  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-08 15:45:13.102  INFO 7308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 15:45:13.105  INFO 7308 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 15:45:13.455  INFO 7308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 15:45:13.496  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 15:45:13.498  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 15:45:13.941  INFO 7308 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 15:45:13.948  INFO 7308 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:45:14.430  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 15:45:14.438  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 4.098 seconds (JVM running for 5.413)
-2020-08-08 15:45:21.343  INFO 7308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 15:45:21.343  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 15:45:21.353  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2020-08-08 15:45:21.384  INFO 7308 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:45:21.488  INFO 7308 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:45:22.293  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:45:22.370  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:45:45.117  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:45:45.123  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:45:45.568  INFO 7308 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:45:45.606  INFO 7308 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:46:02.732  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='王瑞', email='863159885@qq.com', content='我是博主', avatar='null', createTime=null, adminComment=false, blog=Blog{id=3, title='null', content='null', firstPicture='null', flag='null', description='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, adminComment=false, blog=null, replyComments=[], parentComment=null}}, org.apache.catalina.session.StandardSessionFacade@25b6dca]}
-2020-08-08 15:46:02.771  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 15:46:02.787  INFO 7308 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:46:02.809  INFO 7308 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:46:14.538  INFO 7308 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='王瑞', email='863159885@qq.com', content='回复你了', avatar='null', createTime=null, adminComment=false, blog=Blog{id=3, title='null', content='null', firstPicture='null', flag='null', description='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null'}, replyComments=[], parentComment=Comment{id=14, nickname='null', email='null', content='null', avatar='null', createTime=null, adminComment=false, blog=null, replyComments=[], parentComment=null}}, org.apache.catalina.session.StandardSessionFacade@25b6dca]}
-2020-08-08 15:46:14.569  INFO 7308 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 15:46:14.574  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:46:14.593  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:46:41.438  INFO 7308 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='王瑞', email='863159885@qq.com', content='你也有', avatar='null', createTime=null, adminComment=false, blog=Blog{id=3, title='null', content='null', firstPicture='null', flag='null', description='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null'}, replyComments=[], parentComment=Comment{id=12, nickname='null', email='null', content='null', avatar='null', createTime=null, adminComment=false, blog=null, replyComments=[], parentComment=null}}, org.apache.catalina.session.StandardSessionFacade@25b6dca]}
-2020-08-08 15:46:41.470  INFO 7308 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 15:46:41.475  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:46:41.490  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:50:19.923  INFO 7308 --- [Thread-195] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:50:19.936  INFO 7308 --- [Thread-195] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:50:19.936  INFO 7308 --- [Thread-195] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-08-08 15:50:19.936  INFO 7308 --- [Thread-195] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-08-08 15:50:20.224  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 7308 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 15:50:20.243 DEBUG 7308 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 15:50:20.243  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 15:50:20.532  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 15:50:20.573  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 5 JPA repository interfaces.
-2020-08-08 15:50:20.794  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 15:50:20.795  INFO 7308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 15:50:20.795  INFO 7308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 15:50:20.838  INFO 7308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 15:50:20.838  INFO 7308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
-2020-08-08 15:50:20.907  INFO 7308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:50:20.921  INFO 7308 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 15:50:20.926  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2020-08-08 15:50:20.932  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-08-08 15:50:20.933  INFO 7308 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 15:50:21.036  WARN 7308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 15:50:21.109  INFO 7308 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 15:50:21.109  INFO 7308 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:50:21.223  INFO 7308 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 15:50:21.249  INFO 7308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 15:50:21.453  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 15:50:21.453  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 15:50:21.721  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 15:50:21.721  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 1.55 seconds (JVM running for 312.709)
-2020-08-08 15:50:21.721  INFO 7308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-08-08 15:50:27.235  INFO 7308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 15:50:27.235  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 15:50:27.242  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2020-08-08 15:50:37.584  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:50:37.595  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:50:38.078  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:50:38.108  INFO 7308 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:50:44.800  INFO 7308 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='王瑞', email='863159885@qq.com', content='1111', avatar='null', createTime=null, adminComment=false, blog=Blog{id=3, title='null', content='null', firstPicture='null', flag='null', description='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, adminComment=false, blog=null, replyComments=[], parentComment=null}}, org.apache.catalina.session.StandardSessionFacade@474a6698]}
-2020-08-08 15:50:44.831  INFO 7308 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 15:50:44.842  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:50:44.859  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:51:06.174  INFO 7308 --- [Thread-204] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:51:06.174  INFO 7308 --- [Thread-204] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:51:06.175  INFO 7308 --- [Thread-204] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2020-08-08 15:51:06.179  INFO 7308 --- [Thread-204] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2020-08-08 15:51:06.436  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 7308 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 15:51:06.436 DEBUG 7308 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 15:51:06.436  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 15:51:06.754  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 15:51:06.783  INFO 7308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 5 JPA repository interfaces.
-2020-08-08 15:51:06.964  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 15:51:06.964  INFO 7308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 15:51:06.965  INFO 7308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 15:51:07.004  INFO 7308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 15:51:07.004  INFO 7308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 568 ms
-2020-08-08 15:51:07.067  INFO 7308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:51:07.079  INFO 7308 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 15:51:07.085  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2020-08-08 15:51:07.090  INFO 7308 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2020-08-08 15:51:07.090  INFO 7308 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 15:51:07.177  WARN 7308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 15:51:07.260  INFO 7308 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 15:51:07.261  INFO 7308 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:51:07.361  INFO 7308 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 15:51:07.387  INFO 7308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 15:51:07.550  INFO 7308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 15:51:07.550  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 15:51:07.809  INFO 7308 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 15:51:07.812  INFO 7308 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 1.4 seconds (JVM running for 358.788)
-2020-08-08 15:51:07.813  INFO 7308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-08-08 15:51:10.420  INFO 7308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 15:51:10.516  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 15:51:10.522  INFO 7308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2020-08-08 15:51:10.525  INFO 7308 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:51:10.540  INFO 7308 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:51:10.994  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:51:11.024  INFO 7308 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:51:34.986  INFO 7308 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 15:51:34.990  INFO 7308 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 15:51:35.385  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:51:35.401  INFO 7308 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:51:50.314  INFO 7308 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.post', args=[Comment{id=null, nickname='王瑞', email='863159885@qq.com', content='再来一次', avatar='null', createTime=null, adminComment=false, blog=Blog{id=3, title='null', content='null', firstPicture='null', flag='null', description='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null'}, replyComments=[], parentComment=Comment{id=21, nickname='null', email='null', content='null', avatar='null', createTime=null, adminComment=false, blog=null, replyComments=[], parentComment=null}}, org.apache.catalina.session.StandardSessionFacade@21d1cc03]}
-2020-08-08 15:51:50.347  INFO 7308 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : redirect:/comments/3
-2020-08-08 15:51:50.359  INFO 7308 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 15:51:50.378  INFO 7308 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 15:59:14.233  INFO 15184 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 15184 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 15:59:14.236 DEBUG 15184 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 15:59:14.237  INFO 15184 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 15:59:14.302  INFO 15184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-08 15:59:14.302  INFO 15184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-08 15:59:15.102  INFO 15184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 15:59:15.194  INFO 15184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 5 JPA repository interfaces.
-2020-08-08 15:59:16.081  INFO 15184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 15:59:16.091  INFO 15184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 15:59:16.092  INFO 15184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 15:59:16.224  INFO 15184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 15:59:16.225  INFO 15184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1922 ms
-2020-08-08 15:59:16.486  INFO 15184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 15:59:16.528  INFO 15184 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 15:59:16.583  INFO 15184 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-08-08 15:59:16.730  WARN 15184 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 15:59:16.763  INFO 15184 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-08 15:59:16.853  INFO 15184 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-08 15:59:16.988  INFO 15184 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-08 15:59:16.998  INFO 15184 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 15:59:17.007  INFO 15184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 15:59:17.425  INFO 15184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 15:59:17.487  INFO 15184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 15:59:17.487  INFO 15184 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 15:59:17.858  INFO 15184 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 15:59:17.867  INFO 15184 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 15:59:18.408  INFO 15184 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 15:59:18.417  INFO 15184 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 4.726 seconds (JVM running for 6.108)
-2020-08-08 16:00:17.276  INFO 6988 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 6988 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
-2020-08-08 16:00:17.280 DEBUG 6988 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-2020-08-08 16:00:17.280  INFO 6988 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
-2020-08-08 16:00:17.468  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-08 16:00:17.468  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-08 16:00:18.030  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-08 16:00:18.110  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 5 JPA repository interfaces.
-2020-08-08 16:00:18.804  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-08 16:00:18.812  INFO 6988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-08 16:00:18.812  INFO 6988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-08-08 16:00:18.932  INFO 6988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-08 16:00:18.932  INFO 6988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1464 ms
-2020-08-08 16:00:19.124  INFO 6988 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-08 16:00:19.172  INFO 6988 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-08 16:00:19.224  INFO 6988 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-08-08 16:00:19.314  WARN 6988 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-08 16:00:19.356  INFO 6988 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-08 16:00:19.449  INFO 6988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-08 16:00:19.590  INFO 6988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-08 16:00:19.601  INFO 6988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-08 16:00:19.607  INFO 6988 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-08-08 16:00:19.965  INFO 6988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-08 16:00:20.006  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-08 16:00:20.008  INFO 6988 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-08 16:00:20.407  INFO 6988 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-08 16:00:20.413  INFO 6988 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-08 16:00:20.948  INFO 6988 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-08 16:00:20.948  INFO 6988 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 4.234 seconds (JVM running for 5.561)
-2020-08-08 16:00:30.988  INFO 6988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-08 16:00:30.988  INFO 6988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-08 16:00:30.999  INFO 6988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2020-08-08 16:00:31.029  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:31.159  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:31.988  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:32.057  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:33.273  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:33.287  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:33.753  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:33.788  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:34.552  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:34.575  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:34.946  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:34.970  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:35.496  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:35.517  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:35.966  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:35.989  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:36.131  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:36.137  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:36.492  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:36.515  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:36.759  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:36.782  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:37.145  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:37.173  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:37.418  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:37.443  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:37.936  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:37.959  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:38.011  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:38.032  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:38.386  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:38.410  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:38.633  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:38.653  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:39.003  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:39.023  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:39.147  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:39.170  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:39.534  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:39.553  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:39.848  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:39.869  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:40.224  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:40.245  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:42.001  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:42.008  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:42.396  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:42.417  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:42.682  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:42.704  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:43.065  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:43.085  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:43.247  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:43.267  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:43.626  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:43.647  INFO 6988 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:43.865  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:43.872  INFO 6988 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:44.232  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:44.252  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:45.837  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:45.865  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:46.233  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:46.253  INFO 6988 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:46.400  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:46.423  INFO 6988 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:46.773  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:46.793  INFO 6988 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:00:47.014  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:00:47.032  INFO 6988 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:00:47.383  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:00:47.402  INFO 6988 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog :: commentList
-2020-08-08 16:01:53.193  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
-2020-08-08 16:01:53.216  WARN 6988 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 16:01:53.223  WARN 6988 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2020-08-08 16:01:53.226  INFO 6988 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : index
-2020-08-08 16:01:56.892  INFO 6988 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/3', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[3, {}]}
-2020-08-08 16:01:56.917  INFO 6988 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Result : blog
-2020-08-08 16:01:57.409  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/3', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[3, {}]}
-2020-08-08 16:01:57.424  INFO 6988 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : blog :: commentList
+2020-08-31 14:33:20.444  INFO 21756 --- [restartedMain] com.wruins.BlogApplication               : Starting BlogApplication on wruins with PID 21756 (D:\Coder\blog\target\classes started by wruins in D:\Coder\blog)
+2020-08-31 14:33:20.452 DEBUG 21756 --- [restartedMain] com.wruins.BlogApplication               : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-31 14:33:20.452  INFO 21756 --- [restartedMain] com.wruins.BlogApplication               : The following profiles are active: dev
+2020-08-31 14:33:20.546  INFO 21756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-31 14:33:20.546  INFO 21756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-31 14:33:22.050  INFO 21756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-31 14:33:22.143  INFO 21756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 5 JPA repository interfaces.
+2020-08-31 14:33:23.174  INFO 21756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-31 14:33:23.184  INFO 21756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-31 14:33:23.184  INFO 21756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-31 14:33:23.362  INFO 21756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-31 14:33:23.363  INFO 21756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2816 ms
+2020-08-31 14:33:23.588  INFO 21756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-31 14:33:23.840  INFO 21756 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-31 14:33:23.970  INFO 21756 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-31 14:33:23.990  WARN 21756 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-31 14:33:24.253  INFO 21756 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-31 14:33:24.379  INFO 21756 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-31 14:33:24.393  INFO 21756 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-31 14:33:24.610  INFO 21756 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-31 14:33:24.631  INFO 21756 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-31 14:33:25.135  INFO 21756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-31 14:33:25.192  INFO 21756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-31 14:33:25.194  INFO 21756 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-31 14:33:26.023  INFO 21756 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-31 14:33:26.031  INFO 21756 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-31 14:33:26.666  INFO 21756 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-31 14:33:26.676  INFO 21756 --- [restartedMain] com.wruins.BlogApplication               : Started BlogApplication in 6.786 seconds (JVM running for 9.213)
+2020-08-31 14:34:20.190  INFO 21756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-31 14:34:20.190  INFO 21756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-31 14:34:20.202  INFO 21756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-08-31 14:34:20.289  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:34:20.542  WARN 21756 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-08-31 14:34:20.555  WARN 21756 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-08-31 14:34:20.561  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:34:21.650  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:34:21.657  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:34:51.536  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/33', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[33, {}]}
+2020-08-31 14:34:51.637  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:34:52.178  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:34:52.183  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:34:52.283  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/33', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[33, {}]}
+2020-08-31 14:34:52.303  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog :: commentList
+2020-08-31 14:35:50.854  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:35:50.876  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:35:51.255  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:35:51.259  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:04.866  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.wruins.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:04.881  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : types
+2020-08-31 14:37:05.341  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:05.345  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:06.502  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/23', ip='127.0.0.1', classMethod='com.wruins.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 23, {}]}
+2020-08-31 14:37:06.511  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : types
+2020-08-31 14:37:06.875  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:06.879  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:07.344  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/1', ip='127.0.0.1', classMethod='com.wruins.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 1, {}]}
+2020-08-31 14:37:07.350  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : types
+2020-08-31 14:37:07.654  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:07.658  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:08.551  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:08.574  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:08.991  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:08.994  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:09.762  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/24', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 24, {}]}
+2020-08-31 14:37:09.772  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:10.084  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:10.089  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:10.832  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/2', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 2, {}]}
+2020-08-31 14:37:10.840  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:11.132  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:11.137  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:13.059  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/24', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 24, {}]}
+2020-08-31 14:37:13.067  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:13.380  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:13.384  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:17.086  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/2', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], 2, {}]}
+2020-08-31 14:37:17.093  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:17.450  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:17.453  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:22.875  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.wruins.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:22.882  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : types
+2020-08-31 14:37:23.230  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:23.233  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:24.367  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:24.374  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:24.683  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:24.687  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:25.833  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.wruins.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:25.841  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : types
+2020-08-31 14:37:26.178  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:26.182  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:26.899  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.wruins.web.TagShowController.tags', args=[Page request [number: 0, size 5, sort: updateTime: DESC], -1, {}]}
+2020-08-31 14:37:26.905  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : tags
+2020-08-31 14:37:27.224  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:27.227  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:28.535  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.wruins.web.ArchiveShowCotroller.archives', args=[{}]}
+2020-08-31 14:37:28.552  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : archives
+2020-08-31 14:37:28.960  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:28.963  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:45.489  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/33', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[33, {}]}
+2020-08-31 14:37:45.512  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:37:45.814  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:45.817  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:37:45.897  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/comments/33', ip='127.0.0.1', classMethod='com.wruins.web.CommentController.comments', args=[33, {}]}
+2020-08-31 14:37:45.900  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog :: commentList
+2020-08-31 14:37:50.129  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.wruins.web.aboutShowController.about', args=[]}
+2020-08-31 14:37:50.130  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : about
+2020-08-31 14:37:50.526  INFO 21756 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:37:50.529  INFO 21756 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:37.947  INFO 21756 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:38:37.956  INFO 21756 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:38:38.302  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:38.304  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:52.031  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:38:52.052  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:38:52.377  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:52.379  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:55.272  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:38:55.292  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:38:55.582  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:55.584  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:55.933  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:38:55.955  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:38:56.240  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:56.242  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:56.543  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:38:56.548  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:38:56.827  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:56.830  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:57.004  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/blog/32', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.blog', args=[32, {}]}
+2020-08-31 14:38:57.018  INFO 21756 --- [http-nio-8080-exec-3] com.wruins.aspect.LogAspect              : Result : blog
+2020-08-31 14:38:57.313  INFO 21756 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:57.315  INFO 21756 --- [http-nio-8080-exec-5] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:38:59.542  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:38:59.550  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:38:59.880  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:38:59.883  INFO 21756 --- [http-nio-8080-exec-9] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:39:01.255  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:39:01.263  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:39:01.576  INFO 21756 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:39:01.579  INFO 21756 --- [http-nio-8080-exec-7] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:39:02.705  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:39:02.711  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:39:03.046  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:39:03.048  INFO 21756 --- [http-nio-8080-exec-1] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:39:03.383  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:39:03.390  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:39:03.686  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:39:03.688  INFO 21756 --- [http-nio-8080-exec-10] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:39:03.941  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:39:03.948  INFO 21756 --- [http-nio-8080-exec-8] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:39:04.244  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:39:04.246  INFO 21756 --- [http-nio-8080-exec-4] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList
+2020-08-31 14:39:04.478  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-08-31 14:39:04.487  INFO 21756 --- [http-nio-8080-exec-6] com.wruins.aspect.LogAspect              : Result : index
+2020-08-31 14:39:04.784  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.wruins.web.IndexController.newblogs', args=[{}]}
+2020-08-31 14:39:04.786  INFO 21756 --- [http-nio-8080-exec-2] com.wruins.aspect.LogAspect              : Result : _fragment :: newblogList

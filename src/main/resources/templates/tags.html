@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragment :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -9,7 +9,8 @@
 </head>
 <body>
 <!--导航 -->
-<nav class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+<nav th:replace="_fragment :: menu(3)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small">
+    <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
     <div class="ui container"><!--定义容器，实现网格-->
         <div class="ui inverted secondary stackable menu"><!--//间距-->
             <h2 class="ui teal header item">Blog</h2><!--///条目化-->
@@ -40,376 +41,79 @@
                     <h3 class="ui teal header">标签</h3>
                 </div>
                 <div class="right aligned column">
-                    共 <h2 class="ui orange header m-inline-block"> 14 </h2> 篇
+                    共 <h2 class="ui orange header m-inline-block" th:text="${#arrays.length(tags)}"> 14 </h2> 篇
                 </div>
             </div>
         </div>
         <div class="ui attached segment">
-            <a href="#" class="ui teal basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-            <a href="#" class="ui basic left pointing label large m-margin-tb-tiny">springboot <div class="detail">14</div></a>
-
+                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic left pointing label large m-margin-tb-tiny"
+                   th:classappend="${tag.id==activeTagId} ? teal" th:each="tag : ${tags}" th:text="${tag.name}">
+                    <span th:text="${tag.name}">springboot</span>
+                    <div class="detail" th:text="${#arrays.length(tag.blogs)}">14</div>
+                </a>
         </div>
         <div class="ui top attached teal segment">
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
+            <div class="ui vertical segment m-padding-blog-big" th:each="blog : ${page.content}">
+                <div class="ui mobile aligned reversed stackable grid">
                     <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
+                        <h3 class="ui header"><a href="" class="m-black-a"
+                                                 th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}"
+                                                 target="_blank">优秀文章摘抄</a></h3>
+                        <p class="m-text" th:text="|${blog.description}....|">
+                            月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
                             也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
                         <div class="ui stackable grid">
-                            <div class="row">
-
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                                <div class="content"><a href="#" class="header">王瑞</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i>2020-07-06
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i>1245
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                    </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
+                            <div class="row m-padding-label-mini">
                                 <div class="eleven wide column">
                                     <div class="ui mini horizontal link list">
                                         <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
+                                            <img src="../static/img/timg.jpg" th:src="@{${blog.user.avatar}}"
+                                                 alt="" class="ui avatar image m-label-img-size">
+                                            <div class="content"><a href="#" class="header"
+                                                                    th:text="${blog.user.nickname}">王瑞</a></div>
                                         </div>
                                         <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
+                                            <i class="calendar icon"></i><span
+                                                th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-07-06</span>
                                         </div>
                                         <div class="item">
-                                            <i class="eye icon"></i>1245
+                                            <i class="eye icon"></i><span th:text="${blog.views}">1245</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
+                                    <a href="#" th:href="@{/types/{id}(id=${blog.type.id})}"
+                                       class="ui teal label m-padding-label"
+                                       th:text="${blog.type.name}">认知升级</a>
                                 </div>
-
                             </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
+                            <div class="row m-padding-label-mini">
+                                <div class="column ">
+                                    <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" th:each="tag : ${blog.tags}"
+                                       class="ui basic  left pointing label m-padding-label-mini"
+                                       th:classappend="${tag.id==activeTagId} ? teal" th:text="${tag.name}">c++</a>
                                 </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui vertical segment m-padding-blog-big m-mobile-cl-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">优秀文章摘抄</h3>
-                        <p class="m-text">月光在不断徘徊，时光在不断期待，可以看到沧海桑田，可以看到那些交错而过的情缘，也可以看到岁月里面的缠绵，
-                            也可以看到时光的容颜，在不断呼唤，也可以拥抱着那些....
-                        <div class="ui stackable grid">
-                            <div class="row">
-
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/img/timg.jpg" alt="" class="ui avatar image m-label-img-size">
-                                            <div class="content"><a href="#" class="header">王瑞</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i>2020-07-06
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i>1245
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal label m-padding-label">认知升级</a>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="#" class="ui basic teal left pointing label m-padding-label-mini m-text-thin">方法论</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/img/profession.jpg" alt="" style="height: 120px;" class="ui rounded image ">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                            <img src="../static/img/profession.jpg" th:src="@{${blog.firstPicture}}" alt=""
+                                 style="height: 120px;" class="ui rounded image ">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="ui bottom attached segment">
+        <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <a href="#" class="ui mini teal basic button">上一页</a>
+                    <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}"
+                       class="ui mini teal basic button">上一页</a>
                 </div>
                 <div class="right aligned column">
-                    <a href="#" class="ui mini teal basic button">下一页</a>
+                    <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}"
+                       class="ui mini teal basic button">下一页</a>
                 </div>
             </div>
         </div>
@@ -417,7 +121,8 @@
 </div>
 
 <!-- foot -->
-<footer class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+<footer th:replace="_fragment :: footer"
+        class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
     <div class="ui center aligned container">
         <div class="ui divided inverted stackable grid">
             <div class="three wide column">
@@ -453,9 +158,10 @@
 
 </footer>
 
-
+<!--/*/<th:block th:replace="_fragment :: script">/*/-->
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 
 <script>
     $('.menu.toggle').click(function () {

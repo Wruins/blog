@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragment :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!-- 宽屏适应-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -9,7 +9,7 @@
 </head>
     <body>
         <!--导航 -->
-        <nav class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
+        <nav th:replace="_fragment :: menu(5)" class="ui inverted attached segment m-padding-tb-mini m-shadow-small"> <!--利用semantic ui/颜色反向/四角贴紧/区域块/自定义css（上下间距）-->
     <div class="ui container"><!--定义容器，实现网格-->
         <div class="ui inverted secondary stackable menu"><!--//间距-->
             <h2 class="ui teal header item">Blog</h2><!--///条目化-->
@@ -80,7 +80,7 @@
             </div>
         </div>
         <!-- foot -->
-        <footer class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
+        <footer th:replace="_fragment :: footer" class="ui inverted vertical segment m-padding-tb-massive m-text-lined m-text-spaced ">
     <div class="ui center aligned container">
         <div class="ui divided inverted stackable grid">
             <div class="three wide column">
@@ -117,8 +117,10 @@
 </footer>
 
 
+        <!--/*/<th:block th:replace="_fragment :: script">/*/-->
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!--/*/</th:block>/*/-->
 
         <script>
             $('.menu.toggle').click(function () {

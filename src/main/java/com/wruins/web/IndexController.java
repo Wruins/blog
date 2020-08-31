@@ -35,7 +35,7 @@ public class IndexController {
        model.addAttribute("page",blogService.listBlog(pageable));
        model.addAttribute("types",typeService.listTypeTop(6));
        model.addAttribute("tags",tagService.listTagTop(10));
-       model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(8) );
+       model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(5) );
        return "index";
     }
 
@@ -52,6 +52,12 @@ public class IndexController {
     public String blog(@PathVariable Long id,Model model) {
        model.addAttribute("blog",blogService.getAndConvert(id));
         return "blog";
+    }
+
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model){
+       model.addAttribute("newblogs",blogService.listRecommendBlogTop(3));
+       return "_fragment :: newblogList";
     }
 
 }
